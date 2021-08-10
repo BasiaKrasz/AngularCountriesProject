@@ -1,0 +1,36 @@
+<div class="h15">
+  <app-header [backButtonVisibility]="true"></app-header>
+</div>
+<div class="h85 overflow-auto w-100">
+  <div class="overflow-x">
+    <div class="row justify-content-center">
+      <div *ngIf="countryProperties" class="col-8 p-5">
+        <div class="my-3">
+          <div class="row p-2">
+            <div class="col-4">
+              <img [src]="countryProperties.flag" alt="" class="flag" />
+            </div>
+            <div class="col-8 align-self-center">
+              <h2>{{ countryProperties?.name }}:</h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <app-label [label]="'Capital'">{{
+            countryProperties?.capital
+          }}</app-label>
+          <app-label [label]="'Currency'">
+            <ng-container
+              *ngFor="let currency of countryProperties?.currencies"
+              >{{ currency.name }}</ng-container
+            ></app-label
+          >
+          <app-label [label]="'Population'">{{
+            countryProperties?.population
+          }}</app-label>
+          <app-label [label]="'Area'">{{ countryProperties?.area }}</app-label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

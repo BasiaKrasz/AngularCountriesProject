@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-warning h-100">
+  <div class="d-flex justify-content-between container-fluid">
+    <div>
+      <button
+        [ngClass]="{ invisible: !backButtonVisibility }"
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="back()"
+      >
+        < Back
+      </button>
+    </div>
+    <div class="text-secondary"><app-logo></app-logo></div>
+    <app-about-modal></app-about-modal>
+  </div>
+</nav>

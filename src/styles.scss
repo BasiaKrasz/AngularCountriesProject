@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+$base-color: #c6538c;
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+  .flag {
+    width: 50px;
+    border-radius: 5px;
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+  }
+  .americas:hover {
+    fill: blue;
+    border: none;
+  }
+  .americas:focus {
+    fill: blue;
+    border: none;
+  }
+  .africa:hover {
+    fill: rgb(255, 193, 7);
+  }
+  .oceania:hover {
+    fill: orange;
+  }
+  .europe:hover {
+    fill: green;
+  }
+  .asia:hover {
+    fill: red;
+  }
+  .bg-lightgrey {
+    background-color: lightgrey;
+  }
+  .overflow-x {
+    overflow-x: hidden;
+  }
+  .h15 {
+    height: 15%;
+  }
+  .h85 {
+    height: 85%;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
